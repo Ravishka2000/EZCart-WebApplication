@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 // import UserRoutes from "./routes/UserRoutes.js";
 import ProductRoutes from "./routes/ProductRoutes.js";
-import ProductCategoryRoutes from "./routes/ProductsCategoryRoutes.js";
 // import Handlers from "./middlewares/errorHandler.js";
 // import cookieParser from "cookie-parser";
 
@@ -30,8 +29,9 @@ app.use("/api/product", ProductRoutes);
 
 // app.use(Handlers.notfound);
 // app.use(Handlers.errorHandler);
-
+console.log(URI);
 mongoose.set("strictQuery", false);
+
 mongoose.connect(URI, PARAMS)
     .then(() => app.listen(PORT, 
         () => console.info(`Server running on PORT ${PORT} 🔥`)))
