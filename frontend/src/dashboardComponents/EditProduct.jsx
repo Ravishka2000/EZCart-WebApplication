@@ -64,6 +64,22 @@ function EditProduct() {
         });
     };
 
+    const handleImageUpload = (e) => {
+        const file = e.target.files[0]; // Assuming you're allowing one image upload
+        const reader = new FileReader();
+
+        reader.onload = (event) => {
+            setFormData({
+                ...formData,
+                image: event.target.result, // Set the image to be previewed
+            });
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
+
     const handleUpdate = async (e) => {
         e.preventDefault();
 
@@ -169,13 +185,26 @@ function EditProduct() {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
-                                label="Image Url"
+                                label="Image URL"
                                 name="image"
                                 value={formData.image}
                                 onChange={handleInputChange}
                                 fullWidth
                                 required
                             />
+                        </Grid>
+                        <Grid item xs={12}>
+                            {/* <input
+                                type="file"
+                                accept="image/*"
+                                name="image"
+                                onChange={handleImageUpload}
+                            />
+                            <img
+                                src={formData.image}
+                                alt="Product Image"
+                                style={{ maxWidth: '100px' }}
+                            /> */}
                         </Grid>
                         <Grid item xs={12}>
                             <Button
