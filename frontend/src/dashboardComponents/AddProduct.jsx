@@ -36,11 +36,19 @@ function AddProduct() {
         e.preventDefault();
 
         try {
-            // Additional validation for price and quantity
-            const price = parseFloat(formData.price);
-            const quantity = parseInt(formData.quantity);
+            const { title, description, price, category, brand, quantity, color, image } = formData;
 
-            if (isNaN(price) || isNaN(quantity)) {
+            // Check for empty fields
+            if (!title || !description || !price || !category || !brand || !quantity || !color || !image) {
+                setError('Please fill in all fields.');
+                return;
+            }
+
+            // Additional validation for price and quantity
+            const priceValue = parseFloat(price);
+            const quantityValue = parseInt(quantity);
+
+            if (isNaN(priceValue) || isNaN(quantityValue)) {
                 setError('Price and Quantity must be valid numbers.');
                 return;
             }
