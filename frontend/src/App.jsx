@@ -8,6 +8,7 @@ import Header from './dashboardComponents/header'
 import Dashboard from "./dashboardComponents/Dashboard";
 import AddProduct from "./dashboardComponents/AddProduct";
 import EditProduct from "./dashboardComponents/EditProduct";
+import Reports from './dashboardComponents/Reports';
 
 function App() {
   // const { user } = useAuthContext()
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/" element={<Dashboard/>} exact></Route>
                     <Route path="/add product" element={<AddProduct/>} exact></Route>
                     <Route path="/edit-product/:productId" element={<EditProduct/>} exact></Route>
+                    <Route path="/generate" element={<Reports/>} exact></Route>
                 </Routes>
             </main>
 

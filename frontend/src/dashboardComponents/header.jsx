@@ -59,7 +59,7 @@ const header = () => {
                         <Box sx={{ marginLeft: 'auto', marginRight: 'auto', display: { xs: 'none', md: 'block' } }}>
                             <Typography component={Link} to="/" sx={{ textDecoration: 'none', fontSize: '18px', fontWeight: '600', color: 'white', pl: '30px' }}>Dashboard</Typography>
                             <Typography component={Link} to="/add product" sx={{ textDecoration: 'none', fontSize: '18px', fontWeight: '600', color: 'white', pl: '30px' }}>Add Products</Typography>
-
+                            <Typography component={Link} to="/generate" sx={{ textDecoration: 'none', fontSize: '18px', fontWeight: '600', color: 'white', pl: '30px' }}>Generate Reports</Typography>
                         </Box>
                         <Button component={Link} to="/" sx={{ textDecoration: 'none', textTransform: 'none', fontSize: '18px', fontWeight: '800', color: 'white', pl: '20px', marginRight: '20px', display: { xs: 'none', md: 'block' } }}>Logout</Button>
                         {/* {user ? (
@@ -88,6 +88,8 @@ const header = () => {
                             <Typography component={Link} to="/" sx={{ textDecoration: 'none', fontSize: '20px', fontWeight: '500', color: 'black', mt: '20px' }}>Dashboard</Typography>
                             <Typography component={Link} to="/" sx={{ textDecoration: 'none', fontSize: '20px', fontWeight: '500', color: 'black', mt: '20px' }}>Products</Typography>
                             <Typography component={Link} to="/" sx={{ textDecoration: 'none', fontSize: '20px', fontWeight: '500', color: 'black', mt: '20px' }}>Add Products</Typography>
+                            <Divider />
+                            <Typography component={Link} to="/" sx={{ textDecoration: 'none', fontSize: '20px', fontWeight: '500', color: 'black', mt: '20px' }}>Generate Reports</Typography>
                             <Divider />
                             <Button component={Link} to="/" sx={{ textDecoration: 'none', textTransform: 'none', fontSize: '20px', fontWeight: '500', color: 'black', mt: '20px', ml: '0' }}>Logout</Button>
                         
