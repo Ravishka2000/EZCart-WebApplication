@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Button, Typography, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const buttonStyle = {
     minWidth: '200px', // Set the same width for all buttons
@@ -20,9 +21,11 @@ function Reports() {
                     </Button>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
-                    <Button variant="contained" color="primary" fullWidth style={buttonStyle}>
-                        All Orders Report
-                    </Button>
+                    <Link to={'/all-orders'}>
+                        <Button variant="contained" color="primary" fullWidth style={buttonStyle}>
+                            All Orders Report
+                        </Button>
+                    </Link>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
                     <Button variant="contained" color="primary" fullWidth style={buttonStyle}>
