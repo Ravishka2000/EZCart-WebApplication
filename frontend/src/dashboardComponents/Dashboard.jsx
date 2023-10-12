@@ -30,16 +30,6 @@ const Dashboard = () => {
             });
     }
 
-    // Function to handle search and update filtered products
-    const handleSearch = (e) => {
-        const term = e.target.value.toLowerCase();
-        setSearchTerm(term);
-        const filtered = products.filter(product =>
-            product.category.toLowerCase().includes(term)
-        );
-        setFilteredProducts(filtered);
-    }
-
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <div className="container">
