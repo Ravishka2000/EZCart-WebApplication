@@ -47,7 +47,7 @@ function AddProduct() {
 
             setError(null); // Clear any previous errors
 
-            const response = await axios.post('http://localhost:5000/api/product', formData);
+            const response = await axios.post('https://ezcart-zq3e.onrender.com/api/product', formData);
             console.log(response.data); // Handle the response as needed
 
             // Optionally, reset the form fields after successful submission

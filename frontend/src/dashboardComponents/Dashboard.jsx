@@ -8,7 +8,7 @@ const Dashboard = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/product")
+        axios.get("https://ezcart-zq3e.onrender.com/api/product")
             .then((res) => {
                 setProducts(res.data);
             })
@@ -18,7 +18,7 @@ const Dashboard = () => {
     }, []);
 
     const handleDelete = (productId) => {
-        axios.delete(`http://localhost:5000/api/product/${productId}`)
+        axios.delete(`https://ezcart-zq3e.onrender.com/api/product/${productId}`)
             .then((res) => {
                 // If the deletion is successful, you may want to update the product list to reflect the changes.
                 // You can fetch the updated product list again or remove the deleted product from the state.

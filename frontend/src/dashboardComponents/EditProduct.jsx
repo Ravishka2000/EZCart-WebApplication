@@ -29,7 +29,7 @@ function EditProduct() {
     useEffect(() => {
         async function fetchProductData() {
             try {
-                const response = await axios.get(`http://localhost:5000/api/product/${productId}`);
+                const response = await axios.get(`https://ezcart-zq3e.onrender.com/api/product/${productId}`);
                 const productData = response.data;
 
                 // Set the product data in the state
@@ -78,7 +78,7 @@ function EditProduct() {
 
             // Clear any previous errors
             // Send a PUT request to update the product data
-            await axios.put(`http://localhost:5000/api/product/${productId}`, formData);
+            await axios.put(`https://ezcart-zq3e.onrender.com/api/product/${productId}`, formData);
 
             // Redirect to the dashboard or product details page after a successful update
 
